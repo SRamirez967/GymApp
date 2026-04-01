@@ -71,8 +71,9 @@
             </div>
             <!-- Boton registrar -->
             <div class="flex justify-center">
-                <button type="submit" onclick="registar()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">REGISTRAR</button>
+                <button onclick="Usuario.registar()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">REGISTRAR</button>
             </div>
+            <p id="mensajeRegistrar">MENSAJE</p>
         </div>
 
         <!-- Seccion ingresar -->
@@ -82,14 +83,14 @@
             <!-- Campo para ingresar, botón y mensaje -->
             <div>
                 <div class="flex items-center space-x-5">
-                    <label>DOCUMENTO</label>
+                    <label for="documentoIngresar">DOCUMENTO</label>
                     <div class="flex">
-                        <input type="number" class="bg-amber-50 rounded-l-md text-[#3B2C35] px-1">
-                        <button class="font-[Raleway] bg-[#59C9A5] px-2 py-1 rounded-r-md cursor-pointer hover:bg-[#56E39F]"><i class="fa-solid fa-arrow-right" style="color: #fffcf2;"></i></button>
+                        <input type="number" id="documentoIngresar" name="documentoIngresar" class="bg-amber-50 rounded-l-md text-[#3B2C35] px-1">
+                        <button onclick="Usuario.ingresar()" class="font-[Raleway] bg-[#59C9A5] px-2 py-1 rounded-r-md cursor-pointer hover:bg-[#56E39F]"><i class="fa-solid fa-arrow-right" style="color: #fffcf2;"></i></button>
                     </div>
                 </div>
             </div>
-            <label>MENSAJE</label>
+            <p id="mensajeIngresar">MENSAJE</p>
         </div>
     </div>
 
@@ -97,7 +98,7 @@
     <div class="bg-[#2A1F2D] text-amber-50 row-span-2 col-span-3">
         <div class="flex flex-col items-center mx-2 my-8 space-y-8 text-amber-50">
             <h1 class="text-3xl">TABLA DE USUARIOS</h1>
-            <table class="w-full table-auto bg-[#3B2C35] border-collapse border-spacing-1 border border-gray-400">
+            <table id="tablaUsuarios" class="w-full table-auto bg-[#3B2C35] border-collapse border-spacing-1 border border-gray-400">
                 <tr class="bg-[#59C9A5]">
                     <th>NOMBRE</th>
                     <th>DOCUMENTO</th>
@@ -107,36 +108,6 @@
                     <th>TIPO</th>
                     <th>DESC</th>
                     <th>VISITAS</th>
-                </tr>
-                <tr class="text-center">
-                    <td>Juan</td>
-                    <td>1212121212</td>
-                    <td>mariare4343m@gmail.com</td>
-                    <td>02/03/2010</td>
-                    <td>Premium</td>
-                    <td>Anfitrión</td>
-                    <td>Sí</td>
-                    <td>3</td>
-                </tr>
-                <tr class="text-center">
-                    <td>Juan</td>
-                    <td>1212121212</td>
-                    <td>mariare4343m@gmail.com</td>
-                    <td>02/03/2010</td>
-                    <td>Premium</td>
-                    <td>Anfitrión</td>
-                    <td>Sí</td>
-                    <td>3</td>
-                </tr>
-                <tr class="text-center">
-                    <td>Juan</td>
-                    <td>1212121212</td>
-                    <td>mariare4343m@gmail.com</td>
-                    <td>02/03/2010</td>
-                    <td>Premium</td>
-                    <td>Anfitrión</td>
-                    <td>Sí</td>
-                    <td>3</td>
                 </tr>
             </table>
         </div>
@@ -153,15 +124,17 @@
             <!-- Botones actualizar tabla y estadísticas -->
             <div class="flex justify-evenly">
                 <button class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR TABLA</button>
-                <button class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR ESTADISTICAS</button>
+                <button onclick="Usuario.actualizarEstadisticas()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR ESTADISTICAS</button>
             </div>
             <!-- Estadíticas -->
             <div>
-                <p>Mostrando estadistica 1</p>
-                <p>Mostrando estadistica 2</p>
-                <p>Mostrando estadistica 3</p>
-                <p>Mostrando estadistica 4</p>
-                <p>Mostrando estadistica 5</p>
+                <p id="usuariosActivos"></p>
+                <p id="gananciaMes"></p>
+                <p id="masComprado"></p>
+                <p id="pAnfitrion"></p>
+                <p id="pInvitado"></p>
+                <p id="edadPromedio"></p>
+                <p id="masActivo"></p>
             </div>
         </div>
     </div>
