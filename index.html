@@ -5,73 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GymApp</title>
     <link href="./output.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Bungee&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nabla&family=Nova+Square&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/db703935de.js" crossorigin="anonymous"></script>
 </head>
-<body class="grid grid-cols-2 grid-rows-2 gap-4">
+<body class="grid grid-cols-5 grid-rows-2 gap-2 bg-black font-[Raleway]">
     <!-- Seccion registrar e ingresar -->
-    <div class="bg-amber-200 h-96">
+    <div class="bg-[#2A1F2D] text-amber-50 col-span-2">
         <!-- Seccion registrar -->
-        <div class="flex flex-col m-8">
+        <div class="flex flex-col m-8 space-y-8">
             <!-- Titulo -->
-            <div class="border-2">
-                <h1>REGISTRAR</h1>
+            <div>
+                <h1 class="text-3xl">REGISTRAR</h1>
             </div>
             <!-- Formulario: Nombre, Documento, Celular, Correo, Plan, Tipo y Descuento -->
-            <div class="flex justify-between my-3">
-                <div class="border-2 space-y-3">
-                    <div>
-                        <label>Nombre</label>
-                        <input>
+            <div class="flex justify-between">
+                <!-- Columna 1 -->
+                <div class="space-y-3">
+                    <div class="flex justify-between space-x-5">
+                        <label for="nombre">NOMBRE</label>
+                        <input type="text"  id="nombre" name="nombre" required class="bg-amber-50 rounded-md text-[#3B2C35] px-1 w-32">
                     </div>
-                    <div>
-                        <label>Nombre</label>
-                        <input>
+                    <div class="flex justify-between space-x-5">
+                        <label for="documento">DOCUMENTO</label>
+                        <input type="number" id="documento" name="documento" required class="bg-amber-50 rounded-md text-[#3B2C35] px-1 w-32">
                     </div>
-                    <div>
-                        <label>Nombre</label>
-                        <input>
+                    <div class="flex justify-between space-x-5">
+                        <label for="correo">CORREO</label>
+                        <input type="email" id="correo" name="correo" required class="bg-amber-50 rounded-md text-[#3B2C35] px-1 w-32">
                     </div>
-                    <div>
-                        <label>Nombre</label>
-                        <input>
+                    <div class="flex justify-between space-x-5">
+                        <label for="fecha">F. NACIMIENTO</label>
+                        <input type="date" id="fecha" name="fecha" required class="bg-amber-50 rounded-md text-[#3B2C35] px-1 w-32">
                     </div>
                 </div>
-                <div class="border-2 space-y-3">
-                    <div>
-                        <label>Nombre</label>
-                        <input>
+
+                <!-- Columna 2 -->
+                 <div class="space-y-3">
+
+                    <div class="flex justify-between space-x-5">
+                        <label for="plan">PLAN</label>
+                        <select id="plan" name="plan" required class="bg-amber-50 rounded-md text-[#3B2C35] px-1 w-28">
+                            <option value="">--</option>
+                            <option value="Básico">Básico</option>
+                            <option value="Pro">Pro</option>
+                            <option value="Premium">Premium</option>
+                        </select>
                     </div>
-                    <div>
-                        <label>Nombre</label>
-                        <input>
+                    <div class="flex justify-between space-x-5">
+                        <label for="tipo">TIPO</label>
+                        <select id="tipo" name="tipo" required class="bg-amber-50 rounded-md text-[#3B2C35] px-1 w-28">
+                            <option value="">--</option>
+                            <option value="Anfitrión">Anfitrión</option>
+                            <option value="Invitado">Invitado</option>
+                        </select>
                     </div>
-                    <div>
-                        <label>Nombre</label>
-                        <input>
+                    <div class="space-x-3">
+                        <input type="checkbox" id="descuento" name="descuento" class="bg-amber-50 accent-[#59C9A5]">
+                        <label for="descuento">DESCUENTO</label>
                     </div>
                 </div>
             </div>
             <!-- Boton registrar -->
-            <div class="flex justify-center border-2">
-                <button class="bg-amber-600">REGISTRAR</button>
+            <div class="flex justify-center">
+                <button type="submit" onclick="registar()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">REGISTRAR</button>
             </div>
         </div>
+
         <!-- Seccion ingresar -->
-        <div class="flex justify-between bg-amber-100 m-8 border-2">
+        <div class="flex flex-col space-y-8 m-8">
             <!-- Titulo -->
-            <h1>INGRESAR</h1>
+            <h1 class="text-3xl">INGRESAR</h1>
             <!-- Campo para ingresar, botón y mensaje -->
-            <div class="bg-amber-500">
-                <div>
+            <div>
+                <div class="flex items-center space-x-5">
                     <label>DOCUMENTO</label>
-                    <input class="bg-amber-50">
-                    <button>Buscar</button>
+                    <div class="flex">
+                        <input type="number" class="bg-amber-50 rounded-l-md text-[#3B2C35] px-1">
+                        <button class="font-[Raleway] bg-[#59C9A5] px-2 py-1 rounded-r-md cursor-pointer hover:bg-[#56E39F]"><i class="fa-solid fa-arrow-right" style="color: #fffcf2;"></i></button>
+                    </div>
                 </div>
-                <label>MENSAJE</label>
+            </div>
+            <label>MENSAJE</label>
+        </div>
+    </div>
+
+    <!-- Sección tabla de usuarios -->
+    <div class="bg-[#2A1F2D] text-amber-50 row-span-2 col-span-3">
+        <div class="flex flex-col items-center mx-2 my-8 space-y-8 text-amber-50">
+            <h1 class="text-3xl">TABLA DE USUARIOS</h1>
+            <table class="w-full table-auto bg-[#3B2C35] border-collapse border-spacing-1 border border-gray-400">
+                <tr class="bg-[#59C9A5]">
+                    <th>NOMBRE</th>
+                    <th>DOCUMENTO</th>
+                    <th>CORREO</th>
+                    <th>F. NACIMIENTO</th>
+                    <th>PLAN</th>
+                    <th>TIPO</th>
+                    <th>DESC</th>
+                    <th>VISITAS</th>
+                </tr>
+                <tr class="text-center">
+                    <td>Juan</td>
+                    <td>1212121212</td>
+                    <td>mariare4343m@gmail.com</td>
+                    <td>02/03/2010</td>
+                    <td>Premium</td>
+                    <td>Anfitrión</td>
+                    <td>Sí</td>
+                    <td>3</td>
+                </tr>
+                <tr class="text-center">
+                    <td>Juan</td>
+                    <td>1212121212</td>
+                    <td>mariare4343m@gmail.com</td>
+                    <td>02/03/2010</td>
+                    <td>Premium</td>
+                    <td>Anfitrión</td>
+                    <td>Sí</td>
+                    <td>3</td>
+                </tr>
+                <tr class="text-center">
+                    <td>Juan</td>
+                    <td>1212121212</td>
+                    <td>mariare4343m@gmail.com</td>
+                    <td>02/03/2010</td>
+                    <td>Premium</td>
+                    <td>Anfitrión</td>
+                    <td>Sí</td>
+                    <td>3</td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+
+    <!-- Sección estadísticas -->
+    <div class="bg-[#2A1F2D] text-amber-50 col-span-2">
+        <div class="m-8 space-y-8">
+            <!-- Titulo -->
+            <div>
+                <h1 class="text-3xl">ESTADÍSTICAS</h1>
+            </div>
+            <!-- Botones actualizar tabla y estadísticas -->
+            <div class="flex justify-evenly">
+                <button class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR TABLA</button>
+                <button class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR ESTADISTICAS</button>
+            </div>
+            <!-- Estadíticas -->
+            <div>
+                <p>Mostrando estadistica 1</p>
+                <p>Mostrando estadistica 2</p>
+                <p>Mostrando estadistica 3</p>
+                <p>Mostrando estadistica 4</p>
+                <p>Mostrando estadistica 5</p>
             </div>
         </div>
     </div>
-    <div class="bg-amber-900 h-full row-span-3"></div>
-    <div class="bg-amber-300 h-96"></div>
 
     <script src="/index.js"></script>
 </body>
