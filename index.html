@@ -123,18 +123,20 @@
             </div>
             <!-- Botones actualizar tabla y estadísticas -->
             <div class="flex justify-evenly">
-                <button class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR TABLA</button>
+                <button onclick="Usuario.actualizarTabla()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR TABLA</button>
                 <button onclick="Usuario.actualizarEstadisticas()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR ESTADISTICAS</button>
             </div>
             <!-- Estadíticas -->
             <div>
-                <p id="usuariosActivos"></p>
-                <p id="gananciaMes"></p>
-                <p id="masComprado"></p>
-                <p id="pAnfitrion"></p>
-                <p id="pInvitado"></p>
-                <p id="edadPromedio"></p>
-                <p id="masActivo"></p>
+                <ul>
+                    <li id="usuariosActivos"></li>
+                    <li id="gananciaMes"></li>
+                    <li id="masComprado"></li>
+                    <li id="pAnfitrion"></li>
+                    <li id="pInvitado"></li>
+                    <li id="edadPromedio"></li>
+                    <li id="masActivo"></li>
+                </ul>
             </div>
         </div>
     </div>
