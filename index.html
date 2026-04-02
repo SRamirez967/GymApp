@@ -12,7 +12,7 @@
 
     <script src="https://kit.fontawesome.com/db703935de.js" crossorigin="anonymous"></script>
 </head>
-<body class="grid grid-cols-5 grid-rows-2 gap-2 bg-black font-[Raleway]">
+<body class="grid grid-cols-5 grid-rows-2 bg-black font-[Raleway]">
     <!-- Seccion registrar e ingresar -->
     <div class="bg-[#2A1F2D] text-amber-50 col-span-2">
         <!-- Seccion registrar -->
@@ -71,7 +71,7 @@
             </div>
             <!-- Boton registrar -->
             <div class="flex justify-center">
-                <button onclick="Usuario.registar()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">REGISTRAR</button>
+                <button onclick="Usuario.registar()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer transition duration-300 ease-out hover:scale-102 hover:bg-[#977288] hover:shadow-[0px_0px_15px_#977288]">REGISTRAR</button>
             </div>
             <p id="mensajeRegistrar">MENSAJE</p>
         </div>
@@ -86,7 +86,7 @@
                     <label for="documentoIngresar">DOCUMENTO</label>
                     <div class="flex">
                         <input type="number" id="documentoIngresar" name="documentoIngresar" class="bg-amber-50 rounded-l-md text-[#3B2C35] px-1">
-                        <button onclick="Usuario.ingresar()" class="font-[Raleway] bg-[#59C9A5] px-2 py-1 rounded-r-md cursor-pointer hover:bg-[#56E39F]"><i class="fa-solid fa-arrow-right" style="color: #fffcf2;"></i></button>
+                        <button onclick="Usuario.ingresar()" class="font-[Raleway] bg-[#59C9A5] px-2 py-1 rounded-r-md cursor-pointer transition duration-300 ease-out hover:scale-102 hover:bg-[#977288] hover:shadow-[0px_0px_15px_#977288]"><i class="fa-solid fa-arrow-right" style="color: #fffcf2;"></i></button>
                     </div>
                 </div>
             </div>
@@ -122,9 +122,9 @@
                 <h1 class="text-3xl">ESTADÍSTICAS</h1>
             </div>
             <!-- Botones actualizar tabla y estadísticas -->
-            <div class="flex justify-evenly">
-                <button onclick="Usuario.actualizarTabla()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR TABLA</button>
-                <button onclick="Usuario.actualizarEstadisticas()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer hover:bg-[#56E39F]">ACTUALIZAR ESTADISTICAS</button>
+            <div class="flex justify-between">
+                <button onclick="Usuario.actualizarTabla()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer transition duration-300 ease-out hover:scale-102 hover:bg-[#977288] hover:shadow-[0px_0px_15px_#977288]">ACTUALIZAR TABLA</button>
+                <button onclick="Usuario.actualizarEstadisticas()" class="font-[Raleway] bg-[#59C9A5] px-3 py-2 rounded-md cursor-pointer transition duration-300 ease-out hover:scale-102 hover:bg-[#977288] hover:shadow-[0px_0px_15px_#977288]">ACTUALIZAR ESTADISTICAS</button>
             </div>
             <!-- Estadíticas -->
             <div>
